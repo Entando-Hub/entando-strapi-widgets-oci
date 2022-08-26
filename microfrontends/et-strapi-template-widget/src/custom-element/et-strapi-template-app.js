@@ -35,6 +35,7 @@ class EtApp extends HTMLElement {
     }
     connectedCallback() {
         this.mountPoint = document.createElement('span')
+        this.appendChild(this.mountPoint);
         this.keycloak = { ...getKeycloakInstance(), initialized: true }
         this.unsubscribeFromKeycloakEvent = subscribeToWidgetEvent(KEYCLOAK_EVENT_TYPE, (e) => {
             if (e.detail.eventType === "onReady") {

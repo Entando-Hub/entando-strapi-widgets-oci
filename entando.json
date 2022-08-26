@@ -58,8 +58,8 @@
         ]
     },
     "svc": ["keycloak"],
-    "name": "pbcs-150-ent710-main",
+    "name": "entando-strapi-widgets-oci",
     "version": "0.0.1",
-    "description": "pbcs-150-ent710-main description",
+    "description": "entando-strapi-widgets-oci description",
     "type": "bundle"
 }
