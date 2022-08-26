@@ -47,7 +47,7 @@ export default class App extends Component {
 
   setLocale = () => {
     const currLocale = this.props.config && this.props.config.locale;
-    if (currLocale.length) {
+    if (currLocale && currLocale.length) {
       this.setState({ locale: currLocale });
     }
   }
