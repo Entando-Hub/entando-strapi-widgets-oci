@@ -1,0 +1,8 @@
+code: ent-prj-tmpl-bundle
+description: Template for ent projects
+components:
+  plugins:
+    - plugins/entando-template-ms-plugin.yaml
+  widgets:
+    - ui/widgets/widgets-dir/et-strapi-template-widget/et-strapi-template-widget-descriptor.yaml
+
