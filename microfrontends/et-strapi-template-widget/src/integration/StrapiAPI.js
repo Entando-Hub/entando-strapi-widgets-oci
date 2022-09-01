@@ -142,8 +142,9 @@ function filterBy(componentsList, element) {
  * Get strapi configurations
  * @returns
  */
-export const getStrapiConfigurations = async () => {
-    const result = await axios.get(process.env.REACT_APP_STRAPI_CONFIG_BE_URL)
+export const getStrapiConfigurations = async (configServerURL) => {
+    
+    const result = await axios.get(`${configServerURL}/api/config/`)
         .then((res) => {
             return res;
         }).catch((e) => {

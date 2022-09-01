@@ -201,4 +201,4 @@ export const STRAPI_BASE_URL_KEY = 'STRAPI_CONFIG';
 export const BTN_RELOAD_PAGE = 'Reload Page';
 export const STRAPI_CONFIG_WARNING_MSG = "Strapi can't be reached. Please use Strapi Config Widget and configure a correct URL";
 
-export const REACT_APP_LOCAL_STRAPI_TOKEN = ''
+export const REACT_APP_LOCAL_STRAPI_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjYyMDMyMDE0LCJleHAiOjE2NjQ2MjQwMTR9.TxZgBRbBkgM98e6KLxbc2eQIyRqnjOrqlgGcEMw5Cks'

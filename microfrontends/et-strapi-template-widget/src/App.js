@@ -21,17 +21,44 @@ export default class App extends Component {
       locale:'en',
       messages:{ en, it },
       loading: false,
+      apiUrl: null,
     }
   }
 
   componentDidMount = () => {
     this.setLocale();
+    // Set urls
+    console.log('1234 this.props componentDidMount', this.props)
+    const { systemParams, } = this.props.config || {};
+    console.log("systemParams,New LOG", systemParams);
+      const { api } = systemParams || {};
+    console.log("api,New LOG", api);
+      this.setState({
+        apiUrl: {
+          'int-api': api && api['int-api'].url,
+          // Optional
+          'ext-api': api && api['ext-api'].url
+        }
+      });
+      console.log("componentDidMount UpDATED - TEMPLATE~UI", this.state);
   }
-
+  
   componentDidUpdate = (prevProps, prevState) => {
+    console.log('1234 this.props componentDidUpdate', this.props)
     if (prevProps.config !== this.props.config) {
+      const { systemParams, } = this.props.config || {};
+      const { api } = systemParams || {};
+      this.setState({
+        apiUrl: {
+          'int-api': api && api['int-api'].url,
+          // Optional
+          'ext-api': api && api['ext-api'].url
+        }
+      });
+      console.log("componentDidMount UpDATED - TEMPLATE~UI", this.state);
       this.setLocale();
     }
+    console.log("TEMPLATE APP.JS componentDidUpdate",this.props.config);
   }
 
   addNotification = (notificationObj) => {
@@ -61,6 +88,8 @@ export default class App extends Component {
   }
  
   render() {
+    console.log("CONIG TeMplate", this.props.config);
+    console.log("CONIG TeMplate", this.state.apiUrl);
     return (
       <IntlProvider locale={this.state.locale} messages={this.state.messages[this.state.locale]}>
         <div>
@@ -92,13 +121,13 @@ export default class App extends Component {
             <HashRouter>
               <Switch>
                 <Route path="/" exact>
-                  <ListContentTemplates addNotification={this.addNotification} />
+                  <ListContentTemplates addNotification={this.addNotification} apiUrl={this.state.apiUrl} />
                 </Route>
                 <Route path="/add-template" exact>
-                  <AddContentTemplate addNotification={this.addNotification} loading={this.state.loading} setLoader={this.setLoader} />
+                  <AddContentTemplate addNotification={this.addNotification} loading={this.state.loading} setLoader={this.setLoader} apiUrl={this.state.apiUrl} />
                 </Route>
                 <Route path="/edit-template/:templateId" exact>
-                  <EditContentTemplate addNotification={this.addNotification} loading={this.state.loading} setLoader={this.setLoader} />
+                  <EditContentTemplate addNotification={this.addNotification} loading={this.state.loading} setLoader={this.setLoader} apiUrl={this.state.apiUrl} />
                 </Route>
               </Switch>
             </HashRouter>

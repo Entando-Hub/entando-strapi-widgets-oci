@@ -54,7 +54,7 @@ class TemplateDataTable extends Component {
 
     componentDidUpdate = async (prevProps, prevState) => {
         if (prevProps.selectedCollectionType !== this.props.selectedCollectionType ||
-            prevState.pageSize !== this.state.pageSize) {
+            prevState.pageSize !== this.state.pageSize || prevProps.apiUrl !== this.props.apiUrl) {
             await this.getTemplates(this.props.selectedCollectionType, true).then(res => {
                 if (this.state.templateData.length) {
                     this.setState({ currPageWillUpdating: PAGE })
@@ -93,7 +93,8 @@ class TemplateDataTable extends Component {
 
     async getTemplates(selectedCollectionType, shouldInitPage = false) {
         this.setState({loadingData: true});
-        const data = await getAllTemplates(shouldInitPage ? 1 : this.state.page, this.state.pageSize, selectedCollectionType);
+        console.log("apiUrl={this.props.apiUrl}XDXDXDXDXD", this.props.apiUrl);
+        const data = await getAllTemplates(shouldInitPage ? 1 : this.state.page, this.state.pageSize, selectedCollectionType, this.props.apiUrl['int-api']);
         if (data || !isError) {
             const { payload } = data.templateList;
             const { lastPage, page, pageSize, totalItems } = data.templateList.metadata;
@@ -135,6 +136,7 @@ class TemplateDataTable extends Component {
     };
 
     render() {
+        console.log('microfrontends/et-strapi-template-widget/src/components/TemplateDataTable.js', this.props.apiUrl);
         const pagination = {
             page: this.state.page,
             perPage: this.state.pageSize,

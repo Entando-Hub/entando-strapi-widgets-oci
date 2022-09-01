@@ -49,10 +49,13 @@ class EtApp extends HTMLElement {
      * Get strapi configurations
      */
      getStrapiConfiguration = async (isConnectedCallback) => {
+         console.log("this.#config Web-Components===>", this.#config);
         localStorage.removeItem(STRAPI_BASE_URL_KEY);
-        const { data, isError } = await getStrapiConfigurations();
+        const configServerURLGet = this.#config.systemParams.api['ext-api']['url']
+        console.log("configServerURLGet ;-)",configServerURLGet);
+        const { data, isError } = await getStrapiConfigurations(configServerURLGet); // TODO: Config need(local1337)
         if (!isError && data && data.data && data.data.baseUrl) {
-            const result = await checkIfUrlExists(data.data.baseUrl);
+            const result = await checkIfUrlExists(data.data.baseUrl); // TODO: Validating(local1337)
             if (result && result.data && result.data.status === 200 && !result.isError) {
                 localStorage.setItem(STRAPI_BASE_URL_KEY, data.data.baseUrl);
             }

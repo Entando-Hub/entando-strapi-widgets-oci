@@ -41,6 +41,12 @@
                     "name": "int-api",
                     "type": "internal",
                     "serviceName": "strapi-template-bundle"
+                },
+                {
+                    "name": "ext-api",
+                    "type": "external",
+                    "serviceName": "strapi-config-mcr-service",
+                    "bundle": "registry.hub.docker.com/vijayhyadav/strapi-general-configs"
                 }
             ]
         }

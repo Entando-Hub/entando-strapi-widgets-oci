@@ -13,8 +13,9 @@ const urlPagedTemplates = `${templateBaseUrl}paged`;
  * Get paginated templates
  * @returns 
  */
-export const getAllTemplates = async (page, pageSize, selectedContentType) => {
-    const url = `${urlPagedTemplates}?page=${page}&pageSize=${pageSize}&templateApiId=${encodeURIComponent(selectedContentType)}`;
+export const getAllTemplates = async (page, pageSize, selectedContentType, endpointPath) => {
+    const url = `${endpointPath}/api/template/paged?page=${page}&pageSize=${pageSize}&templateApiId=${encodeURIComponent(selectedContentType)}`;
+    // const url = `${urlPagedTemplates}?page=${page}&pageSize=${pageSize}&templateApiId=${encodeURIComponent(selectedContentType)}`;
     const { data, isError } = await getData(url)
     // eventHandler(
     //     isError,
