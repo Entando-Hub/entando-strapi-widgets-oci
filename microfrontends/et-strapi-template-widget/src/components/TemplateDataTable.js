@@ -76,7 +76,7 @@ class TemplateDataTable extends Component {
     handleDelete = async () => {
         let notificationObj = NOTIFICATION_OBJECT;
         notificationObj.key = uuidv4(),
-            await deleteTemplate(this.state.selectedTempate.id).then((res) => {
+            await deleteTemplate(this.state.selectedTempate.id, this.props.apiUrl['int-api']).then((res) => {
                 this.componentDidMount();
                 this.modalHide();
                 if (res.isError) {
@@ -93,7 +93,6 @@ class TemplateDataTable extends Component {
 
     async getTemplates(selectedCollectionType, shouldInitPage = false) {
         this.setState({loadingData: true});
-        console.log("apiUrl={this.props.apiUrl}XDXDXDXDXD", this.props.apiUrl);
         const data = await getAllTemplates(shouldInitPage ? 1 : this.state.page, this.state.pageSize, selectedCollectionType, this.props.apiUrl['int-api']);
         if (data || !isError) {
             const { payload } = data.templateList;
@@ -136,7 +135,6 @@ class TemplateDataTable extends Component {
     };
 
     render() {
-        console.log('microfrontends/et-strapi-template-widget/src/components/TemplateDataTable.js', this.props.apiUrl);
         const pagination = {
             page: this.state.page,
             perPage: this.state.pageSize,

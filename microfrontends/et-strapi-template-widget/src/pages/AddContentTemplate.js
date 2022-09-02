@@ -14,7 +14,7 @@ export default class AddContentTemplate extends Component {
     return (
       <ContentTemplateForm
         addNotification={this.props.addNotification} formType={ADD_LABEL}
-        loading={this.props.loading} setLoader={this.props.setLoader}
+        loading={this.props.loading} setLoader={this.props.setLoader} apiUrl={this.props.apiUrl}
       />
     )
   }

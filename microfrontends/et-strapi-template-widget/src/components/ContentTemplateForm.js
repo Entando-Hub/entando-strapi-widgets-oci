@@ -128,7 +128,7 @@ class ContentTemplateForm extends Component {
     }
 
     getTemplateById = async () => {
-        const res = await getTemplateById(this.props.match.params.templateId);
+        const res = await getTemplateById(this.props.match.params.templateId, this.props.apiUrl['int-api']);
         if (res && !res.isError) {
             let collectionTypeToPrefill = await filterACollectionType(this.state.contentTypes, res.templateData.collectionType);
             this.handleTypeHeadChange(collectionTypeToPrefill);
@@ -187,7 +187,7 @@ class ContentTemplateForm extends Component {
     }
 
     async callAddTemplateApi(templateObject, notificationObj) {
-        await addNewTemplate(templateObject).then((res) => {
+        await addNewTemplate(templateObject, this.props.apiUrl['int-api']).then((res) => {
             if (res.isError) {
                 notificationObj.type = NOTIFICATION_TYPE.ERROR;
                 if (res.errorBody && res.errorBody.response && res.errorBody.response.data && res.errorBody.response.data.errors && res.errorBody.response.data.errors.length) {
@@ -207,7 +207,7 @@ class ContentTemplateForm extends Component {
     }
 
     async callEditTemplateApi(templateObject, notificationObj) {
-        await editTemplate(templateObject, this.props.match.params.templateId).then((res) => {
+        await editTemplate(templateObject, this.props.match.params.templateId, this.props.apiUrl['int-api']).then((res) => {
             if (res.isError) {
                 notificationObj.type = NOTIFICATION_TYPE.ERROR;
                 if (res.errorBody && res.errorBody.response && res.errorBody.response.data && res.errorBody.response.data.errors && res.errorBody.response.data.errors.length) {

@@ -27,12 +27,8 @@ export default class App extends Component {
 
   componentDidMount = () => {
     this.setLocale();
-    // Set urls
-    console.log('1234 this.props componentDidMount', this.props)
     const { systemParams, } = this.props.config || {};
-    console.log("systemParams,New LOG", systemParams);
       const { api } = systemParams || {};
-    console.log("api,New LOG", api);
       this.setState({
         apiUrl: {
           'int-api': api && api['int-api'].url,
@@ -40,11 +36,9 @@ export default class App extends Component {
           'ext-api': api && api['ext-api'].url
         }
       });
-      console.log("componentDidMount UpDATED - TEMPLATE~UI", this.state);
   }
   
   componentDidUpdate = (prevProps, prevState) => {
-    console.log('1234 this.props componentDidUpdate', this.props)
     if (prevProps.config !== this.props.config) {
       const { systemParams, } = this.props.config || {};
       const { api } = systemParams || {};
@@ -55,10 +49,8 @@ export default class App extends Component {
           'ext-api': api && api['ext-api'].url
         }
       });
-      console.log("componentDidMount UpDATED - TEMPLATE~UI", this.state);
       this.setLocale();
     }
-    console.log("TEMPLATE APP.JS componentDidUpdate",this.props.config);
   }
 
   addNotification = (notificationObj) => {
@@ -88,8 +80,6 @@ export default class App extends Component {
   }
  
   render() {
-    console.log("CONIG TeMplate", this.props.config);
-    console.log("CONIG TeMplate", this.state.apiUrl);
     return (
       <IntlProvider locale={this.state.locale} messages={this.state.messages[this.state.locale]}>
         <div>

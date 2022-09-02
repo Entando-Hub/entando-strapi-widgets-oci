@@ -29,13 +29,16 @@ export const getAllTemplates = async (page, pageSize, selectedContentType, endpo
  * @param {} templateData
  * @returns 
  */
-export const addNewTemplate = async (templateData) => {
-    const { data, isError } = await postData(templateBaseUrl, templateData);
+export const addNewTemplate = async (templateData, endpointPath) => {
+
+    const { data, isError } = await postData(`${endpointPath}/api/template/`, templateData);
+    // const { data, isError } = await postData(templateBaseUrl, templateData);
     return checkForErrorsAndSendResponse(data, isError, "newTemplate")
 }
 
-export const editTemplate = async (templateData,id) => {
-    const { data, isError } = await putData(templateBaseUrl+id, templateData);
+export const editTemplate = async (templateData,id, endpointPath) => {
+    const { data, isError } = await putData(`${endpointPath}/api/template/${id}`, templateData);
+    // const { data, isError } = await putData(templateBaseUrl+id, templateData);
     return checkForErrorsAndSendResponse(data, isError, "newTemplate")
 }
 
@@ -46,8 +49,8 @@ export const editTemplate = async (templateData,id) => {
  * @param {*} selectedCollectionType 
  * @returns 
  */
-export const deleteTemplate = async (templateId) => {
-    const { data, isError } = await deleteData(templateBaseUrl, templateId)
+export const deleteTemplate = async (templateId, endpointPath) => {
+    const { data, isError } = await deleteData(`${endpointPath}/api/template/`, templateId)
     return checkForErrorsAndSendResponse(data, isError, "message")
 }
 
@@ -56,8 +59,8 @@ export const deleteTemplate = async (templateId) => {
  * Get template by id
  * @returns 
  */
- export const getTemplateById = async (templateId) => {
-    const { data, isError } = await getData(templateBaseUrl, templateId)
+ export const getTemplateById = async (templateId, endpointPath) => {
+    const { data, isError } = await getData(`${endpointPath}/api/template/`, templateId)
     // eventHandler(
     //     isError,
     //     `${i18n.t('toasterMessage.impossibleToLoadCategory')} ${data ? data.message : ""}`

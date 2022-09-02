@@ -17,7 +17,6 @@ export default class ListContentTemplates extends Component {
     collectionTypeOnChange = (selectedCollectionType) => this.setState({selectedCollectionType});
 
     render() {
-        console.log('microfrontends/et-strapi-template-widget/src/pages/ListContentTemplates.js', this.props.apiUrl);
         return (
             <div className={"mv-2"}>
                 <TemplateSearch loadingState={this.state.loading} setLoading={this.setLoading}

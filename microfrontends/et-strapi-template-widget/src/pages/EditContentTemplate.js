@@ -31,6 +31,7 @@ export default class EditContentTemplate extends Component {
                 <ContentTemplateForm
                     formType={EDIT_LABEL} addNotification={this.props.addNotification}
                     loading={this.props.loading} setLoader={this.props.setLoader}
+                    apiUrl={this.props.apiUrl}
                 />
             </div>
         )
