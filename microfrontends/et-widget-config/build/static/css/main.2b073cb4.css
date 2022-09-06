@@ -1,0 +1,201 @@
+.btn {
+  padding: 2px 12px;
+  border: 0 !important;
+  background-image: none !important;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: #002F87 !important;
+}
+
+.btn-primary:hover:active {
+  background-color: #032a73 !important;
+}
+
+.scw-SingleContentConfigFormBody__addButtons {
+  text-align: right;
+}
+
+.scw-SingleContentConfigFormBody__addButtons {
+  margin-top: 20px;
+}
+
+.scw-ContentsFilter {
+  margin-top: 30px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  border: #EDEDED 1px solid;
+  overflow: auto;
+}
+
+.scw-ContentsFilterModal.modal-dialog {
+  width: 80% !important;
+}
+
+/* .modal-dialog {
+  min-width: 75vw;
+} */
+
+/* .modal-dialog{
+  width: 80% !important;
+} */
+
+.scw-SingleContentConfigForm {
+  background-color: white !important;
+}
+
+.scw-SingleContentConfigFormBody__widgetTitle {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 13px;
+}
+
+.scw-SingleContentConfigFormBody__addButtons {
+  text-align: right;
+}
+
+.scw-SingleContentConfigFormBody__contentTitle {
+  margin: 0;
+}
+
+.scw-AddContentTypeFormBody__save--btn {
+  margin-left: 5px;
+}
+
+/* Single Page Custome Classes */
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.rowCursorPointer {
+  cursor: pointer;
+}
+
+/* Show-Detail-Attribute-Modal CSS START */
+.modal-dialog {
+  width: 80%;
+}
+
+/* Show-Detail-Attribute-Modal CSS END */
+
+.scw-SectionTitle__emphasize-caption, .scw-SectionTitle__non-collapsable {
+  margin-bottom: 30px;
+  padding-bottom: 0;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 18px;
+}
+
+.scw-SectionTitle {
+  width: 100%;
+  padding: 20px 0;
+  outline: none;
+  font-size: 16px;
+  line-height: inherit;
+  text-transform: capitalize;
+}
+
+/* Modal Start */
+div.tab-content .panel-heading {
+  background-color: white !important;
+  background-image: none !important;
+}
+
+div.tab-content .panel {
+  border: none !important;
+  box-shadow: none !important;
+}
+/* Modal End */
+
+/* INLINE STYLE CSS START */
+
+.simpletable-mt {
+  margin-top: 1rem;
+}
+
+.panelgroup-mb {
+  margin-bottom: 5px;
+}
+
+.show-grid {
+  display: flex;
+  font-size: 13px;
+}
+
+.grid-col-field {
+  width: 10%;
+  margin-left: 2.5rem;
+  word-break: break-word;
+}
+
+/* NEED Go Further*/
+
+.grid-col-value {
+  width: 90%;
+  margin-left: 1rem;
+  padding-right: 2rem;
+  line-height: 1.2;
+}
+
+.panel-title {
+  margin-left: -1rem;
+  font-size: 13px;
+}
+
+.accordian-data {
+  word-break: break-word;
+}
+
+.toggle-button {
+  position: absolute;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  border: 1px solid lightgray;
+}
+
+.simple-table-toggle-button {
+  position: absolute;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  border: 1px solid lightgray;
+}
+
+.form {
+  display: flex;
+  margin: 1rem 0rem;
+}
+
+.search-button {
+  margin: 0 0 10px 0;
+}
+
+.lang-tab {
+  overflow-y: auto;
+  height: 38rem;
+  overflow-x: hidden;
+}
+
+.mt-2 {
+  margin-bottom: 0px;
+}
+
+.pull-right {
+  margin: 0 0 10px 0;
+}
+
+.expand-collapse-form {
+  display: flex;
+  margin: 1rem 0rem;
+}
+
+.expand-collapse {
+  margin: 1rem 0rem;
+}
+
+/* INLINE STYLE CSS END */
+
+/*# sourceMappingURL=main.2b073cb4.css.map*/

@@ -1,0 +1,63 @@
+{
+    "microservices": [],
+    "microfrontends": [
+        {
+            "name": "et-widget",
+            "customElement": "my-single-widget",
+            "stack": "react",
+            "type": "widget",
+            "group": "free",
+            "titles": {
+                "en": "SW-en MFE",
+                "it": "SW-it MFE"
+            },
+            "commands": {
+                "run": "npm install && PORT=3002 npm start"
+            },
+            "apiClaims": [
+                {
+                    "name": "ext-api",
+                    "type": "external",
+                    "serviceName": "strapi-config-mcr-service",
+                    "bundle": "registry.hub.docker.com/vijayhyadav/strapi-general-configs"
+                },
+                {
+                    "name": "ext-api-template",
+                    "type": "external",
+                    "serviceName": "strapi-template-bundle",
+                    "bundle": "registry.hub.docker.com/vijayhyadav/entando-strapi-widgets-oci"
+                }
+            ],
+            "configMfe":"et-widget-config"
+        },
+        {
+            "name": "et-widget-config",
+            "customElement": "single-content-widget-config",
+            "stack": "react",
+            "type": "widget-config",
+            "group": "free",
+            "commands": {
+                "run": "npm install && PORT=3001 npm start"
+            },
+            "apiClaims": [
+                {
+                    "name": "ext-api",
+                    "type": "external",
+                    "serviceName": "strapi-config-mcr-service",
+                    "bundle": "registry.hub.docker.com/vijayhyadav/strapi-general-configs"
+                },
+                {
+                    "name": "ext-api-template",
+                    "type": "external",
+                    "serviceName": "strapi-template-bundle",
+                    "bundle": "registry.hub.docker.com/vijayhyadav/entando-strapi-widgets-oci"
+                }
+            ]
+        }
+    ],
+    "svc": [],
+    "name": "scw-fldr-struct",
+    "version": "4.5.6",
+    "description": "scw description",
+    "type": "bundle"
+}
