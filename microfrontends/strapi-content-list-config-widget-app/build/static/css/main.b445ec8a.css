@@ -1,0 +1,247 @@
+.queryBg {
+  border: 1px solid lightgrey;
+  padding: .5rem
+}
+
+.custom-well {
+  background-color: white;
+  margin-top: 3rem;
+}
+
+.disabled-table {
+  background-color: #f1f1f1;
+  color: #b3b1b1;
+}
+
+.divider {
+  border-bottom: 1px solid rgb(235, 232, 232);
+  margin-bottom: 5px;
+}
+
+/* margintop-2rem */
+.mt-2 {
+  margin-top: 2rem;
+}
+
+div.tab-content .panel-heading {
+  background-color: white !important;
+  background-image: none !important;
+}
+
+div.tab-content .panel {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* STYLE AccordionHelper.js START */
+
+.panel-group-mb5 {
+  margin-bottom: 5px;
+}
+
+.grid-row {
+  display: flex;
+  font-size: 13px;
+}
+
+.grid-col-field {
+  width: 10rem;
+  margin-left: 2.5rem;
+  word-break: break-word;
+}
+
+.grid-col-value {
+  width: 90%;
+  margin-left: 1rem;
+  padding-right: 2rem;
+  line-height: 1.2;
+}
+
+.panel-title {
+  margin-left: -1rem;
+  font-size: 13px;
+}
+
+.render-accordian-data {
+  word-break: break-word;
+}
+
+/* STYLE AccordionHelper.js END */
+
+/* STYLE SimpleTable.js START  */
+
+.render-toggle-button {
+  position: absolute;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  border: 1px solid lightgray;
+}
+
+.simpletable-select {
+  display: inline-block;
+  width: 50%
+}
+
+.simpletable-applyToAll-div {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+}
+
+.simpletable-applyToAll-span {
+  margin: 0px 10px;
+}
+
+/* STYLE SimpleTable.js END  */
+
+/* STYLE ExpandCollapse.js START */
+
+.ec-main {
+  margin: 1rem 0rem;
+}
+
+.ec-form {
+  display: flex;
+  margin: 1rem 0rem;
+}
+
+.ec-search-btn {
+  margin: 0 0 10px 0;
+}
+
+/* STYLE ExpandCollapse.js END */
+
+/* STYLE ContentDetailModal.js START */
+
+.cdm-lang-tab {
+  overflow-y: auto;
+  height: 38rem;
+  overflow-x: hidden;
+}
+
+/* STYLE ContentDetailModal.js END */
+
+/* STYLE MultiContentList.js START */
+
+.render-toggle-btn {
+  position: absolute;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  border: 1px solid lightgray;
+}
+
+.collectiontype-heading {
+  margin-bottom: 0px;
+}
+
+.form-main-div {
+  margin: 1rem 0rem;
+}
+
+.form-div {
+  display: flex;
+  margin: 1rem 0rem;
+}
+
+.search-btn-div {
+  margin: 0 0 10px 0;
+}
+
+.queryfilter-label {
+  color: #0088ce;
+}
+
+.table-col-border {
+  border-right: 1px solid lightgrey;
+}
+
+.table-row-border {
+  border-bottom: 1px solid lightgrey;
+  padding: .5rem;
+}
+
+/* STYLE MultiContentList.js END */
+
+/* STYLE Config.js START */
+
+.config-mt {
+  margin-top: 1rem;
+}
+
+.showquery-border-right {
+  border-right: 1px solid lightgrey;
+}
+
+.showquery-border-padding {
+  border: 1px solid lightgrey;
+  padding: .2rem;
+}
+
+.showquery-span {
+  color: #0088ce;
+}
+
+.showquery-select {
+  display: inline-block;
+}
+
+/* STYLE Config.js END */
+
+/* STYLE APP BUILDER CSS START */
+
+.lcw-SingleContentConfigForm {
+  background-color: white !important;
+}
+
+.lcw-SingleContentConfigFormBody__addButtons {
+  text-align: right;
+}
+
+.lcw-SingleContentConfigFormBody__widgetTitle {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 13px;
+}
+
+.lcw-SingleContentConfigFormBody__contentTitle {
+  margin: 0;
+}
+
+.lcw-ContentsFilter {
+  margin-top: 30px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  border: #EDEDED 1px solid;
+  overflow: auto;
+}
+
+.lcw-ContentsFilterModal.modal-dialog {
+  width: 80% !important;
+}
+
+.lcw-AddContentTypeFormBody__save--btn {
+  margin-left: 5px;
+}
+
+.lcw-SectionTitle__emphasize-caption,
+.lcw-SectionTitle__non-collapsable {
+  margin-bottom: 30px;
+  padding-bottom: 0;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 18px;
+}
+
+.lcw-SectionTitle {
+  width: 100%;
+  padding: 20px 0;
+  outline: none;
+  font-size: 16px;
+  line-height: inherit;
+  text-transform: capitalize;
+}
+
+/* STYLE APP BUILDER CSS END */
+
+/*# sourceMappingURL=main.b445ec8a.css.map*/

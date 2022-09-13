@@ -1,0 +1,1 @@
+import "./custom-element/strapi-content-list-widget-app"

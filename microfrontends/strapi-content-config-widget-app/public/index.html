@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+
+<head>
+</head>
+
+<body>
+  <strapi-content-config-widget-app></strapi-content-config-widget-app>
+  
+  <script>
+    function injectConfigIntoMfe() {
+      fetch('%PUBLIC_URL%/mfe-config.json').then(async response => {
+        const config = await response.json();
+        const anotherMfeEl = document.getElementsByTagName('strapi-content-config-widget-app')[0];
+        anotherMfeEl.config = config;
+      })
+    }
+    window.onload = () => injectConfigIntoMfe()
+  </script>
+</body>
+
+</html>
