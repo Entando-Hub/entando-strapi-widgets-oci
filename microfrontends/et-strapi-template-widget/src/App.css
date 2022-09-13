@@ -1,0 +1,161 @@
+.app-bulider__dropdown {
+    margin-bottom: 5 px;
+    background-color: #f1f1f1 !important;
+    border: none;
+    font-weight: 600;
+    color: #4d5258;
+    box-shadow: 0 2px 3px rgb(3 3 3 / 10%);
+}
+
+.well {
+    background-color: #f5f5f5;
+    border: 1 px solid #e3e3e3;
+    border-radius: 1 px;
+    margin-bottom: 20 px;
+    padding: 2rem 1rem;
+    text-align: center;
+    max-width: 50vw;
+    margin: auto;
+}
+
+.well-title {
+    display: flex;
+    color: dimgrey;
+    font-weight: 300;
+}
+
+.primary-btn {
+    width: 100%;
+    color: white;
+    background-color: #043487;
+    border: none;
+}
+
+.default-btn {
+    padding: 2 px 12 px;
+    border: 0 !important;
+    background-image: none;
+    font-weight: 600;
+    color: #4d5258;
+    box-shadow: 0 2px 3px rgb(3 3 3 / 10%);
+}
+
+.validation-block {
+    color: red;
+}
+
+/* margin mt = margin-top, mv = margin-vertical */
+.mt-1 {
+    margin-top: 1rem;
+}
+
+/* margin mt = margin-top, mv = margin-vertical */
+.mt-2 {
+    margin-top: 2rem;
+}
+
+/* margin mt = margin-top, mv = margin-vertical */
+.mv-1 {
+    margin: 1rem 0;
+}
+
+/* margin mt = margin-top, mv = margin-vertical */
+.mv-2 {
+    margin: 2rem 0;
+}
+
+/* .modal-dialog {
+    width: 300px !important;
+} */
+
+.exclamation_icon {
+    color: #9c9c9c;
+    font-size: 57.6px;
+    line-height: 57.6px;
+}
+
+/* STYLE ContentTemplateForm.js START */
+
+.container-fluid-margin {
+    margin-top: 2vw;
+}
+
+.formContainer-margin {
+    margin-bottom: 2em;
+}
+
+.ctf-heading {
+    margin: auto;
+}
+
+.ctf-save-btn {
+    margin-left: 1vw;
+}
+
+.ctf-legend {
+    font-size: 12px;
+    color: #d1d1d1;
+}
+
+.inlineEditingAssistant-btn {
+    color: black;
+}
+
+.aceEditor {
+    border-style: solid;
+    border-color: silver;
+    border-width: thin;
+}
+
+/* STYLE ContentTemplateForm.js END */
+
+/* STYLE TemplateDataTable.js START */
+
+.deleteMsg-h1 {
+    word-break: break-word;
+}
+
+/* STYLE TemplateDataTable.js END */
+
+/* STYLE TemplateSearch.js START */
+
+.search-btn-main {
+    margin-top: 1rem;
+}
+
+.search-label {
+    font-size: large;
+    font-weight: 500;
+}
+
+.type-label {
+    font-size: larger;
+    font-weight: 600;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.search-btn-col-lg-4 {
+    margin-left: 5rem;
+}
+
+.search-select {
+    height: 100%;
+    margin-left: 2rem;
+}
+
+.search-show-grid-row {
+    height: 3.2rem;
+}
+
+.search-well {
+    height: 15rem;
+}
+
+.search-container {
+    position: relative;
+    z-index: "0";
+}
+
+/* STYLE TemplateSearch.js END */
