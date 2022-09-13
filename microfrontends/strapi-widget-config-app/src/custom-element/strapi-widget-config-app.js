@@ -42,7 +42,7 @@ class SingleWidgetElement extends HTMLElement {
     }
 }
 
-customElements.define('single-content-widget-config', SingleWidgetElement);
+customElements.define('strapi-widget-config-app', SingleWidgetElement);
 
 export default SingleWidgetElement;
 

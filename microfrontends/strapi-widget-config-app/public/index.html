@@ -5,13 +5,13 @@
 </head>
 
 <body>
-  <single-content-widget-config></single-content-widget-config>
+  <strapi-widget-config-app></strapi-widget-config-app>
   
   <script>
     function injectConfigIntoMfe() {
       fetch('%PUBLIC_URL%/mfe-config.json').then(async response => {
         const config = await response.json();
-        const anotherMfeEl = document.getElementsByTagName('single-content-widget-config')[0];
+        const anotherMfeEl = document.getElementsByTagName('strapi-widget-config-app')[0];
         anotherMfeEl.config = config;
       })
     }

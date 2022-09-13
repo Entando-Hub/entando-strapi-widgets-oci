@@ -119,11 +119,11 @@
                     "bundle": "registry.hub.docker.com/<org-name>/entando-strapi-widgets-oci"
                 }
             ],
-            "configMfe":"et-widget-config"
+            "configMfe":"strapi-widget-config-app"
         },
         {
-            "name": "et-widget-config",
-            "customElement": "single-content-widget-config",
+            "name": "strapi-widget-config-app",
+            "customElement": "strapi-widget-config-app",
             "stack": "react",
             "type": "widget-config",
             "group": "free",
