@@ -12,7 +12,7 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <my-single-widget name="test"></my-single-widget>
+    <strapi-widget-app name="test"></strapi-widget-app>
 
     <!--
       This HTML file is a template.
@@ -29,7 +29,7 @@
       function injectConfigIntoMfe() {
         fetch('%PUBLIC_URL%/mfe-config.json').then(async response => {
           const config = await response.text()
-          const anotherMfeEl = document.getElementsByTagName('my-single-widget')[0]
+          const anotherMfeEl = document.getElementsByTagName('strapi-widget-app')[0]
           anotherMfeEl.setAttribute('config', config)
         })
       }

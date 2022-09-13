@@ -93,14 +93,14 @@
             ]
         },
         {
-            "name": "et-widget",
-            "customElement": "my-single-widget",
+            "name": "strapi-widget-app",
+            "customElement": "strapi-widget-app(this app renders on publish page after configuring the strapi-widget-config-app)",
             "stack": "react",
             "type": "widget",
             "group": "free",
             "titles": {
-                "en": "SW-en MFE",
-                "it": "SW-it MFE"
+                "en": "strapi widget app",
+                "it": "strapi widget app"
             },
             "commands": {
                 "run": "npm install && PORT=3002 npm start"

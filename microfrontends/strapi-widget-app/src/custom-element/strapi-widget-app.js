@@ -60,7 +60,7 @@ class SingleWidgetElement extends HTMLElement {
     }
 }
 
-customElements.get('my-single-widget') || customElements.define('my-single-widget', SingleWidgetElement);
+customElements.get('strapi-widget-app') || customElements.define('strapi-widget-app', SingleWidgetElement);
 
 export default SingleWidgetElement;
 

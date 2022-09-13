@@ -11,16 +11,13 @@ function App({ name, templateId, contentId }) {
     const [htmlCode, setHtmlCode] = useState(null);
 
     useEffect(async () => {
-        // const getTemplate = await getTemplateById(54);
         const getTemplate = await getTemplateById(templateId);
         const getContent = await getContentById(name, contentId);
         const domain =  await fetchStrapiBaseUrl();
-        // const getContent = await getContentById('banner', 1);
         setTemplateData(getTemplate);
         setContentData(getContent)
 
         // VELOCITY START
-
         if (getContent && getTemplate) {
             Object.keys(getContent).length > 0 && Object.keys(getContent).map((key) => {
                 if (getContent[key] && Array.isArray(getContent[key])) {
