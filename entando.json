@@ -59,24 +59,24 @@
             ]
         },
         {
-            "name": "et-strapi-template-widget",
-            "customElement": "et-strapi-template-app",
+            "name": "strapi-content-template-app",
+            "customElement": "strapi-content-template-app",
             "stack": "react",
             "type": "app-builder",
             "group": "free",
             "nav": [
                 {
                     "label": {
-                        "en": "strapi content temp",
-                        "it": "modello di contenuto strapi"
+                        "en": "Strapi content template app",
+                        "it": "App modello di contenuto strapi"
                     },
                     "target": "internal",
-                    "url": "/strapi-bundle"
+                    "url": "/strapi-content-template"
                 }
             ],
             "slot": "content",
             "paths": [
-                "/strapi-bundle"
+                "/strapi-content-template"
             ],
             "apiClaims": [
                 {
