@@ -35,7 +35,7 @@ export const getTemplateById = async (templateId) => {
 }
 
 const getKeycloakToken = () => {
-    // For testing purpose only
+    // uncomment only for development purpose only
     // return '';
     if (window && window.entando && window.entando.keycloak && window.entando.keycloak.authenticated) {
         return window.entando.keycloak.token

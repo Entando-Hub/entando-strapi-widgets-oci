@@ -51,7 +51,8 @@ const getDefaultOptions = (defaultBearer) => {
 }
 
 const getKeycloakToken = () => {
-    return ''; // only for local test
+    // uncomment only for development purpose only
+    // return '';
     if (window && window.entando && window.entando.keycloak && window.entando.keycloak.authenticated) {
         return window.entando.keycloak.token
     } else {

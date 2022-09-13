@@ -9,11 +9,6 @@ export class SimpleTable extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            // DATA STATE
-            templateType: [{'label': 'vj'}],
-            selectedTemplateType: [],
-        }
     }
 
     /**

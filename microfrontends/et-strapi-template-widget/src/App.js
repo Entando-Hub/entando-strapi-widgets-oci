@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-// import { Route } from 'react-router';
-// import { BrowserRouter } from 'react-router-dom';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import ListContentTemplates from './pages/ListContentTemplates';
 import AddContentTemplate from './pages/AddContentTemplate';
@@ -44,7 +42,6 @@ export default class App extends Component {
       this.setState({
         apiUrl: {
           'int-api': api && api['int-api'].url,
-          // Optional
           'ext-api': api && api['ext-api'].url
         }
       });
