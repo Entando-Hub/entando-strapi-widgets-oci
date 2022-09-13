@@ -1,21 +1,7 @@
 {
     "microservices": [
         {
-            "name": "strapi-config-mcr-service",
-            "stack": "spring-boot",
-            "healthCheckPath": "/actuator/health",
-            "dbms": "postgresql",
-            "ingressPath": "/entando-strapi-config-api/api/",
-            "commands": {
-                "run": "mvn -Dspring-boot.run.arguments=\"--server.port=8081\" spring-boot:run"
-            },
-            "roles": [
-                "et-first-role",
-                "et-second-role"
-            ]
-        },
-        {
-            "name": "strapi-template-bundle",
+            "name": "strapi-content-template-ms",
             "stack": "spring-boot",
             "healthCheckPath": "/actuator/health",
             "dbms": "none",
@@ -30,34 +16,6 @@
         }
     ],
     "microfrontends": [
-        {
-            "name": "config-ui-mcr-frontend",
-            "customElement": "et-strapi-config-app",
-            "stack": "react",
-            "type": "app-builder",
-            "group": "free",
-            "nav": [
-                {
-                    "label": {
-                        "en": "strapi config microservices",
-                        "it": "microservizi di configurazione di strapi"
-                    },
-                    "target": "internal",
-                    "url": "/strapi-mcr-bundle"
-                }
-            ],
-            "slot": "content",
-            "paths": [
-                "/strapi-mcr-bundle"
-            ],
-            "apiClaims": [
-                {
-                    "name": "int-api",
-                    "type": "internal",
-                    "serviceName": "strapi-config-mcr-service"
-                }
-            ]
-        },
         {
             "name": "strapi-content-template-app",
             "customElement": "strapi-content-template-app",
@@ -82,7 +40,7 @@
                 {
                     "name": "int-api",
                     "type": "internal",
-                    "serviceName": "strapi-template-bundle"
+                    "serviceName": "strapi-content-template-ms"
                 },
                 {
                     "name": "ext-api",
@@ -115,7 +73,7 @@
                 {
                     "name": "ext-api-template",
                     "type": "external",
-                    "serviceName": "strapi-template-bundle",
+                    "serviceName": "strapi-content-template-ms",
                     "bundle": "registry.hub.docker.com/<org-name>/entando-strapi-widgets-oci"
                 }
             ],
@@ -140,7 +98,7 @@
                 {
                     "name": "ext-api-template",
                     "type": "external",
-                    "serviceName": "strapi-template-bundle",
+                    "serviceName": "strapi-content-template-ms",
                     "bundle": "registry.hub.docker.com/<org-name>/entando-strapi-widgets-oci"
                 }
             ]

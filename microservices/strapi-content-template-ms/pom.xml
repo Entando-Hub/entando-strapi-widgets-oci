@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.entando</groupId>
-    <artifactId>ent-strapi-config-app-nv</artifactId>
-    <version>1.0.0</version>
-    <description>Strapi application API Configurations for entando</description>
+    <artifactId>strapi-content-template-ms</artifactId>
+    <version>0.0.1</version>
+    <description>Template for an ent compatible project</description>
     <properties>
         <problem-spring-web.version>0.25.0</problem-spring-web.version>
         <java.version>11</java.version>
@@ -77,6 +77,12 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.4</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
         </dependency>
@@ -96,14 +102,14 @@
                     <version>${jib-maven-plugin.version}</version>
                     <configuration>
                         <allowInsecureRegistries>true</allowInsecureRegistries>
-                        <!-- <from>
+                        <from>
                             <image>adoptopenjdk/openjdk11:x86_64-alpine-jdk-11.0.12_7</image>
                         </from>
                         <to>
                             <image><org-name>/${project.artifactId}:${project.version}</image>
-                        </to> -->
+                        </to>
                         <container>
-                            <mainClass>com.entando.apiconfig.StrapiApiConfigApplication</mainClass>
+                            <mainClass>com.entando.template.EntandoMSApplication</mainClass>
                             <ports>
                                 <port>8081</port>
                             </ports>
