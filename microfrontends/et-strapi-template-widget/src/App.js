@@ -32,7 +32,6 @@ export default class App extends Component {
       this.setState({
         apiUrl: {
           'int-api': api && api['int-api'].url,
-          // Optional
           'ext-api': api && api['ext-api'].url
         }
       });
@@ -71,24 +70,14 @@ export default class App extends Component {
     }
   }
 
-  // handleChange = event => {
-  //   this.setState({ locale: event.target.value })
-  // };
-
   setLoader = (shouldLoad) => {
     this.setState({ loading: shouldLoad })
   }
  
   render() {
-    console.log("process.env.SERVER_SERVLET_CONTEXT_PATH: ",process.env.SERVER_SERVLET_CONTEXT_PATH); 
-
     return (
       <IntlProvider locale={this.state.locale} messages={this.state.messages[this.state.locale]}>
         <div>
-          {/* <select onChange={this.handleChange}>
-            <option value="en">en</option>
-            <option value="it">it</option>
-          </select> */}
         <ToastNotificationList>
           {
             this.state.notificationList.map(el => {

@@ -23,9 +23,6 @@ class SingleWidgetElement extends HTMLElement {
 
     attributeChangedCallback(name, oldValue, newValue) {
         this.#updateConfig(newValue)
-        console.log('name, oldValue, newValue', name, '||', oldValue , '||', newValue);
-        console.log("this.#config", this.#config);
-        console.log("this.config", this.config)
         ReactDOM.render(<App ref={this.reactRootRef} config={this.#config} />, this.mountPoint);
     }
 
@@ -38,8 +35,6 @@ class SingleWidgetElement extends HTMLElement {
     }
 
     connectedCallback() {
-        console.log("this.#configvj", this.#config);
-        console.log("this.config", this.config);
         this.mountPoint = document.createElement('div');
         this.appendChild(this.mountPoint);
         

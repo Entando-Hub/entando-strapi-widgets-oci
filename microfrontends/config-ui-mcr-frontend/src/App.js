@@ -32,8 +32,6 @@ export default class App extends Component {
   }
 
   render() {
-    console.log("process.env.SERVER_SERVLET_CONTEXT_PATH: ",process.env.SHELL); 
-
     return (
       <StrapiSetting apiURL={this.state.apiUrl}/>
     )

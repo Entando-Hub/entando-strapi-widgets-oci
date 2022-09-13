@@ -95,10 +95,6 @@ class App extends Component {
     }
 
     render() {
-        console.log("THIS.STATE", this.state);
-        console.log("THIS.PROPS",this.props);
-        console.log("process.env.SERVER_SERVLET_CONTEXT_PATH: ", process.env.SERVER_SERVLET_CONTEXT_PATH); 
-
         return (
             <IntlProvider locale={this.state.locale} messages={this.decideLocale(this.state.locale)}>
                 <>
