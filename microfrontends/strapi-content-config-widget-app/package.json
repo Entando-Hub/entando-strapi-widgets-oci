@@ -1,5 +1,5 @@
 {
-  "name": "react-scw-config",
+  "name": "strapi-content-config-widget-app",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
