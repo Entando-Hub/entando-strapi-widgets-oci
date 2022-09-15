@@ -1,9 +1,0 @@
-/* margin mt = margin-top, mv = margin-vertical, ml = margin left */
-.mt-2 {
-    margin-top: 2rem;
-}
-
-.ml-mt {
-    margin-left: 11rem !important;
-    margin-top: 2vw;
-}

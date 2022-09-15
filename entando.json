@@ -1,21 +1,7 @@
 {
     "microservices": [
         {
-            "name": "strapi-config-mcr-service",
-            "stack": "spring-boot",
-            "healthCheckPath": "/actuator/health",
-            "dbms": "postgresql",
-            "ingressPath": "/entando-strapi-config-api/api/",
-            "commands": {
-                "run": "mvn -Dspring-boot.run.arguments=\"--server.port=8081\" spring-boot:run"
-            },
-            "roles": [
-                "et-first-role",
-                "et-second-role"
-            ]
-        },
-        {
-            "name": "strapi-template-bundle",
+            "name": "strapi-content-template-ms",
             "stack": "spring-boot",
             "healthCheckPath": "/actuator/health",
             "dbms": "none",
@@ -31,76 +17,48 @@
     ],
     "microfrontends": [
         {
-            "name": "config-ui-mcr-frontend",
-            "customElement": "et-strapi-config-app",
+            "name": "strapi-content-template-widget-app",
+            "customElement": "strapi-content-template-widget-app",
             "stack": "react",
             "type": "app-builder",
             "group": "free",
             "nav": [
                 {
                     "label": {
-                        "en": "strapi config microservices",
-                        "it": "microservizi di configurazione di strapi"
+                        "en": "Strapi content template app",
+                        "it": "App modello di contenuto strapi"
                     },
                     "target": "internal",
-                    "url": "/strapi-mcr-bundle"
+                    "url": "/strapi-content-template"
                 }
             ],
             "slot": "content",
             "paths": [
-                "/strapi-mcr-bundle"
+                "/strapi-content-template"
             ],
             "apiClaims": [
                 {
                     "name": "int-api",
                     "type": "internal",
-                    "serviceName": "strapi-config-mcr-service"
-                }
-            ]
-        },
-        {
-            "name": "et-strapi-template-widget",
-            "customElement": "et-strapi-template-app",
-            "stack": "react",
-            "type": "app-builder",
-            "group": "free",
-            "nav": [
-                {
-                    "label": {
-                        "en": "strapi content temp",
-                        "it": "modello di contenuto strapi"
-                    },
-                    "target": "internal",
-                    "url": "/strapi-bundle"
-                }
-            ],
-            "slot": "content",
-            "paths": [
-                "/strapi-bundle"
-            ],
-            "apiClaims": [
-                {
-                    "name": "int-api",
-                    "type": "internal",
-                    "serviceName": "strapi-template-bundle"
+                    "serviceName": "strapi-content-template-ms"
                 },
                 {
                     "name": "ext-api",
                     "type": "external",
-                    "serviceName": "strapi-config-mcr-service",
-                    "bundle": "registry.hub.docker.com/<org-name>/entando-strapi-widgets-oci"
+                    "serviceName": "strapi-config-ms",
+                    "bundle": "registry.hub.docker.com/vijayhyadav/entando-strapi-config-oci"
                 }
             ]
         },
         {
-            "name": "et-widget",
-            "customElement": "my-single-widget",
+            "name": "strapi-content-widget-app",
+            "customElement": "strapi-content-widget-app",
             "stack": "react",
             "type": "widget",
             "group": "free",
             "titles": {
-                "en": "SW-en MFE",
-                "it": "SW-it MFE"
+                "en": "Strapi Content Widget",
+                "it": "Widget di contenuti di Strapi"
             },
             "commands": {
                 "run": "npm install && PORT=3002 npm start"
@@ -109,21 +67,21 @@
                 {
                     "name": "ext-api",
                     "type": "external",
-                    "serviceName": "strapi-config-mcr-service",
-                    "bundle": "registry.hub.docker.com/<org-name>/entando-strapi-widgets-oci"
+                    "serviceName": "strapi-config-ms",
+                    "bundle": "registry.hub.docker.com/vijayhyadav/entando-strapi-config-oci"
                 },
                 {
                     "name": "ext-api-template",
                     "type": "external",
-                    "serviceName": "strapi-template-bundle",
-                    "bundle": "registry.hub.docker.com/<org-name>/entando-strapi-widgets-oci"
+                    "serviceName": "strapi-content-template-ms",
+                    "bundle": "registry.hub.docker.com/vijayhyadav/entando-strapi-widgets-oci"
                 }
             ],
-            "configMfe":"et-widget-config"
+            "configMfe":"strapi-content-config-widget-app"
         },
         {
-            "name": "et-widget-config",
-            "customElement": "single-content-widget-config",
+            "name": "strapi-content-config-widget-app",
+            "customElement": "strapi-content-config-widget-app",
             "stack": "react",
             "type": "widget-config",
             "group": "free",
@@ -134,14 +92,72 @@
                 {
                     "name": "ext-api",
                     "type": "external",
-                    "serviceName": "strapi-config-mcr-service",
-                    "bundle": "registry.hub.docker.com/<org-name>/entando-strapi-widgets-oci"
+                    "serviceName": "strapi-config-ms",
+                    "bundle": "registry.hub.docker.com/vijayhyadav/entando-strapi-config-oci"
                 },
                 {
                     "name": "ext-api-template",
                     "type": "external",
-                    "serviceName": "strapi-template-bundle",
-                    "bundle": "registry.hub.docker.com/<org-name>/entando-strapi-widgets-oci"
+                    "serviceName": "strapi-content-template-ms",
+                    "bundle": "registry.hub.docker.com/vijayhyadav/entando-strapi-widgets-oci"
+                },
+                {
+                    "name": "int-api",
+                    "type": "internal",
+                    "serviceName": "strapi-content-template-ms"
+                }
+            ]
+        },
+        {
+            "name": "strapi-content-list-widget-app",
+            "customElement": "strapi-content-list-widget-app",
+            "stack": "react",
+            "type": "widget",
+            "group": "free",
+            "titles": {
+                "en": "Strapi Content List Widget App",
+                "it": "App Widget Elenco contenuti Strapi"
+            },
+            "commands": {
+                "run": "npm install && PORT=3002 npm start"
+            },
+            "apiClaims": [
+                {
+                    "name": "ext-api",
+                    "type": "external",
+                    "serviceName": "strapi-config-ms",
+                    "bundle": "registry.hub.docker.com/vijayhyadav/entando-strapi-config-oci"
+                },
+                {
+                    "name": "ext-api-template",
+                    "type": "external",
+                    "serviceName": "strapi-content-template-ms",
+                    "bundle": "registry.hub.docker.com/vijayhyadav/entando-strapi-widgets-oci"
+                }
+            ],
+            "configMfe":"strapi-content-list-config-widget-app"
+        },
+        {
+            "name": "strapi-content-list-config-widget-app",
+            "customElement": "strapi-content-list-config-widget-app",
+            "stack": "react",
+            "type": "widget-config",
+            "group": "free",
+            "commands": {
+                "run": "npm install && PORT=3001 npm start"
+            },
+            "apiClaims": [
+                {
+                    "name": "ext-api",
+                    "type": "external",
+                    "serviceName": "strapi-config-ms",
+                    "bundle": "registry.hub.docker.com/vijayhyadav/entando-strapi-config-oci"
+                },
+                {
+                    "name": "ext-api-template",
+                    "type": "external",
+                    "serviceName": "strapi-content-template-ms",
+                    "bundle": "registry.hub.docker.com/vijayhyadav/entando-strapi-widgets-oci"
                 }
             ]
         }
@@ -149,6 +165,6 @@
     "svc": ["keycloak"],
     "name": "entando-strapi-widgets-oci",
     "version": "0.0.1",
-    "description": "entando-strapi-widgets-oci includes strapi-content-app, strapi-content-list-app, strapi-content-template-app, strapi-content-config-app",
+    "description": "entando-strapi-widgets-oci includes strapi-content-app, strapi-content-list-app, strapi-content-template-widget-app, strapi-content-config-app",
     "type": "bundle"
 }
