@@ -22,9 +22,9 @@ import com.entando.template.response.TemplateResponseView;
 import com.entando.template.util.PagedContent;
 
 @Service
-public class EntTamplateService {
+public class EntTemplateService {
 
-	private final Logger logger = LoggerFactory.getLogger(EntTamplateService.class);
+	private final Logger logger = LoggerFactory.getLogger(EntTemplateService.class);
 	private final String CLASS_NAME = this.getClass().getSimpleName();
 
 	@Autowired

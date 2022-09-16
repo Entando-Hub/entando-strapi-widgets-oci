@@ -1,7 +1,7 @@
 {
     "microservices": [
         {
-            "name": "strapi-content-template-ms",
+            "name": "entando-strapi-template-plugin",
             "stack": "spring-boot",
             "healthCheckPath": "/actuator/health",
             "dbms": "none",

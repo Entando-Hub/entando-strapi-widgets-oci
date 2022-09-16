@@ -141,6 +141,7 @@ export const addAuthorizationRequestConfig = (config = {}, defaultBearer = 'Bear
  * @returns 
  */
 export const checkIfUrlExists = async (url) => {
+    url && url.endsWith('/') ? '' : url = url + '/';
     const result = await axios.head(url)
         .then((res) => {
             return res;

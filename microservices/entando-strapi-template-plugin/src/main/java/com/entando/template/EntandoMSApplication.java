@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @Slf4j
 public class EntandoMSApplication {
 	public static void main(String[] args) {
+		System.out.println("test for new build will remove in next build");
 		SpringApplication.run(EntandoMSApplication.class, args);
 	}
 }
